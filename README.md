@@ -6,5 +6,12 @@ export GOPATH="$GOPATH:$(pwd)"
 
 chmod +x build.sh
 
-# To Run
 ./build.sh
+
+# To Run
+bin/arrays
+
+bin/byteSlices
+
+etc...
+
