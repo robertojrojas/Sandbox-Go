@@ -12,7 +12,7 @@ func emit(wordChanChan chan chan string, done chan bool) {
 
 	wordChannel := make(chan string)
 
-	wordChanChan <- wordChannel
+	wordChanChan <- wordChannel //tell the caller about what channel to receive data on
 	
     i := 0
    
@@ -40,6 +40,7 @@ func main() {
 
     go emit(wordChanChan, doneCh)
 
+    // The emit goroutine will tells what channel to receive data on
     wordCh := <- wordChanChan
 	
 
